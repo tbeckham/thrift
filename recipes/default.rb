@@ -23,8 +23,15 @@ include_recipe "build-essential"
 include_recipe "boost"
 include_recipe "python"
 
-%w{ flex bison libtool autoconf pkg-config }.each do |pkg|
-  package pkg
+case node.platform_family
+when "rhel", "fedora"
+  %w{ flex bison libtool autoconf pkgconfig }.each do |pkg|
+    package pkg
+  end
+else
+  %w{ flex bison libtool autoconf pkg-config }.each do |pkg|
+    package pkg
+  end
 end
 
 remote_file "#{Chef::Config[:file_cache_path]}/thrift-#{version}.tar.gz" do

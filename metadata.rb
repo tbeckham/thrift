@@ -9,6 +9,7 @@ version          "1.1.1"
 recipe "thrift", "Installs thrift from source"
 
 supports "ubuntu"
+supports "centos"
 
 %w{ build-essential boost python }.each do |cb|
   depends cb
