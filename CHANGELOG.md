@@ -3,6 +3,11 @@ thrift Cookbook CHANGELOG
 This file is used to list changes made in each version of the thrift cookbook.
 
 
+v1.2.0
+------
+### New Feature
+- **[COOK-2046](https://tickets.opscode.com/browse/COOK-2046)** - Add RHEL support
+
 v1.1.0
 ------
 ### New Feature
