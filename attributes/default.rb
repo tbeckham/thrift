@@ -20,4 +20,4 @@
 default['thrift']['version']  = '0.9.0'
 default['thrift']['mirror']   = 'http://archive.apache.org/dist'
 default['thrift']['checksum'] = '71d129c49a2616069d9e7a93268cdba59518f77b3c41e763e09537cb3f3f0aac'
-default['thrift']['configure_options'] = []
+default['thrift']['configure_options'] = ['--with-ruby=no']
